@@ -1,8 +1,10 @@
 module Components.DecBtn exposing (..)
 
+import Msgs exposing (..)
 import Models exposing (..)
 import Utils exposing (sendMsg)
 import Html exposing (..)
+import Html.Attributes exposing (class)
 import Html.Events exposing (onClick)
 
 
@@ -13,7 +15,7 @@ init =
 
 html : Html Msg
 html =
-    button [ onClick DecBtnClick ] [ text "-" ]
+    button [ class "minus btn", onClick DecBtnClick ] [ text "-" ]
 
 
 update : Msg -> Grid -> ( DecBtn, Cmd Msg )

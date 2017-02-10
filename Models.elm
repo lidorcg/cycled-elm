@@ -1,19 +1,7 @@
 module Models exposing (..)
 
+import Msgs exposing (..)
 import Html exposing (..)
-
-
--- MSGS
-
-
-type Msg
-    = IncBtn
-    | DecBtn
-    | Counter
-    | IncBtnClick
-    | DecBtnClick
-    | Layout
-
 
 
 -- MODELS
@@ -24,6 +12,7 @@ type alias Grid =
     , decBtn : DecBtn
     , counter : Counter
     , layout : Layout
+    , dom : DOM
     }
 
 
@@ -40,4 +29,8 @@ type alias Counter =
 
 
 type alias Layout =
+    Html Msg
+
+
+type alias DOM =
     Html Msg

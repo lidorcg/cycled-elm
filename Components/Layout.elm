@@ -1,8 +1,10 @@
 module Components.Layout exposing (..)
 
+import Msgs exposing (..)
 import Models exposing (..)
 import Utils exposing (sendMsg)
 import Html exposing (..)
+import Html.Attributes exposing (class)
 
 
 init : ( Layout, Cmd Msg )
@@ -12,10 +14,10 @@ init =
 
 html : IncBtn -> DecBtn -> Counter -> Layout
 html incBtn decBtn counter =
-    div []
-        [ decBtn
-        , div [] [ text (toString counter) ]
+    div [ class "container" ]
+        [ h1 [ class "count" ] [ text <| toString counter ]
         , incBtn
+        , decBtn
         ]
 
 

@@ -1,8 +1,10 @@
 module Components.IncBtn exposing (..)
 
+import Msgs exposing (..)
 import Models exposing (..)
 import Utils exposing (sendMsg)
 import Html exposing (..)
+import Html.Attributes exposing (class)
 import Html.Events exposing (onClick)
 
 
@@ -13,7 +15,7 @@ init =
 
 html : Html Msg
 html =
-    button [ onClick IncBtnClick ] [ text "+" ]
+    button [ class "plus btn", onClick IncBtnClick ] [ text "+" ]
 
 
 update : Msg -> Grid -> ( IncBtn, Cmd Msg )

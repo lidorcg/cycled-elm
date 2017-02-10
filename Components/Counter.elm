@@ -1,5 +1,6 @@
 module Components.Counter exposing (..)
 
+import Msgs exposing (..)
 import Models exposing (..)
 import Utils exposing (..)
 
