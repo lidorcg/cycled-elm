@@ -7,7 +7,8 @@ type Msg
     = IncBtn
     | DecBtn
     | Counter
-    | IncBtnClick
-    | DecBtnClick
     | Layout
     | DOM
+    -- DOM Events
+    | IncBtnClick
+    | DecBtnClick

@@ -13,8 +13,7 @@ sendMsg msg =
 script : String -> Html msg
 script url =
     node "script"
-        [ src url
-        ]
+        [ src url ]
         []
 
 
